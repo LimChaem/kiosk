@@ -21,6 +21,7 @@ fun main() {
         Menu().displayInfo()
         when (exception.exceptionHandling("category").toString().toInt()) {
             0 -> {
+                println("주문을 종료합니다.")
                 break
             }
 
@@ -93,7 +94,9 @@ fun main() {
                 choice = exception.exceptionHandling("oder").toString().toInt()
                 if (choice == 1) {
                     println("현재 ${oder.joinToString(",")}\n총 ${oder.size}개 상품이 담겨있습니다.")
-                    println("총 결제 금액은 ${totalPrice}원 입니다.")
+                    println("총 결제 금액은 ${totalPrice}원 입니다.\n돌아가시려면 아무 키나 입력해주세요.")
+                    val pick = readln()// <-- 계산 미구현
+
                 } else {
                     oder.clear()
                     totalPrice = 0
