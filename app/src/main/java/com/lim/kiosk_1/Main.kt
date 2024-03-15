@@ -95,7 +95,9 @@ fun main() {
                 if (choice == 1) {
                     println("현재 ${oder.joinToString(",")}\n총 ${oder.size}개 상품이 담겨있습니다.")
                     println("총 결제 금액은 ${totalPrice}원 입니다.\n돌아가시려면 아무 키나 입력해주세요.")
-                    val pick = readln()// <-- 계산 미구현
+
+                    //계산 미구현, 장바구니 내역 확인하기 위해 데이터 input 전까지 화면 고정할 수 있도록 readln() 해놓음
+                    val pick = readln()
 
                 } else {
                     oder.clear()
